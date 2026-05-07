@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "covasyn": {
+      "command": "npx",
+      "args": ["-y", "@covasyn/mcp-client"],
+      "env": {
+        "COVASYN_API_KEY": "your_api_key_here",
+        "COVASYN_API_BASE": "https://api.covasyn.com"
+      }
+    }
+  }
+}
