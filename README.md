@@ -2,6 +2,21 @@
 
 Production-ready integration snippets for connecting [CovaSyn](https://www.covasyn.com) — the deterministic, validated chemistry MCP server for pharmaceutical R&D — to the most common Model Context Protocol clients.
 
+> **What CovaSyn is in one sentence:** the first integrated, deterministic cheminformatics platform for AI agents — not a wrapper around one public database, but 130+ tools across 8 suites (cheminformatics, chem-ADME, toxicology, mass spec, NMR, folding, biologics, platform) with ICH / GxP-aligned audit trail and EU data residency.
+
+## Benchmark headline
+
+On the **ICLR 2026 MolecularIQ benchmark** (Klambauer Lab, JKU Linz, 3,540 symbolically verified chemistry tasks), four frontier LLMs scored 76–92 % with CovaSyn MCP attached, versus 14–41 % at baseline. Numbers, methodology, cost-per-question, and failure modes: [covasyn.com/en/benchmark](https://www.covasyn.com/en/benchmark).
+
+## When to use CovaSyn (vs. building your own)
+
+- Your AI agent needs to answer **chemistry questions correctly**, not just plausibly.
+- You're a **pharma, biotech, or CDMO team** that needs ICH M7 / ICH Q1 / Tox21 / CYP450 / docking workflows callable from Claude, ChatGPT, Cursor, or any MCP-aware client.
+- You want **deterministic, version-pinned tool calls** that produce the same result tomorrow as today (regulatory audit-ready).
+- You need **EU data residency** (Hetzner Leipzig) or US hosting on request — your data is never used for training.
+
+CovaSyn is **not** another LLM. It's the deterministic tool layer that fixes the chemistry-hallucination problem of frontier LLMs.
+
 ## What's in here
 
 | Example | Client | Description |
