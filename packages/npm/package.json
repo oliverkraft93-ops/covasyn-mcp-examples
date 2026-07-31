@@ -1,0 +1,34 @@
+{
+  "name": "covasyn-mcp",
+  "version": "0.1.0",
+  "description": "CovaSyn chemistry MCP for AI agents — 130+ deterministic tools (ADMET, ICH M7/Q1, docking, DoE, spectra). Thin stdio bridge to the hosted server.",
+  "bin": {
+    "covasyn-mcp": "bin/covasyn-mcp.mjs"
+  },
+  "files": [
+    "bin",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "chemistry",
+    "cheminformatics",
+    "admet",
+    "ich-m7",
+    "pharma",
+    "drug-discovery",
+    "covasyn"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliverkraft93-ops/covasyn-mcp-examples.git",
+    "directory": "packages/npm"
+  },
+  "homepage": "https://covasyn.com/en/docs/mcp",
+  "license": "MIT",
+  "author": "CovaSyn GmbH (https://covasyn.com)"
+}
