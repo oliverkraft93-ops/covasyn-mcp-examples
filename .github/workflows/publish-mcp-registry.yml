@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["server.json"]
+    paths: ["server.json", ".github/workflows/publish-mcp-registry.yml"]
 
 jobs:
   publish:
@@ -19,5 +19,17 @@ jobs:
           curl -L "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_$(uname -s | tr '[:upper:]' '[:lower:]')_$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/').tar.gz" | tar xz mcp-publisher
       - name: Login (GitHub OIDC)
         run: ./mcp-publisher login github-oidc
+      - name: Validate
+        run: |
+          set +e
+          ./mcp-publisher validate > validate.log 2>&1; code=$?
+          cat validate.log
+          [ $code -eq 0 ] || echo "::error title=validate::$(tr '\n' ' ' < validate.log | cut -c1-900)"
+          exit 0
       - name: Publish
-        run: ./mcp-publisher publish
+        run: |
+          set +e
+          ./mcp-publisher publish > publish.log 2>&1; code=$?
+          cat publish.log
+          [ $code -eq 0 ] && echo "::notice title=publish::$(tr '\n' ' ' < publish.log | cut -c1-900)" || echo "::error title=publish::$(tr '\n' ' ' < publish.log | cut -c1-900)"
+          exit $code
