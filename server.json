@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.oliverkraft93-ops/covasyn",
+  "title": "CovaSyn Chemistry Tools",
+  "description": "Chemistry, pharma and biotech tools for AI assistants: spectra, ADMET, ICH M7, stability, DoE.",
+  "version": "1.0.0",
+  "websiteUrl": "https://covasyn.com/en/mcp",
+  "repository": {
+    "url": "https://github.com/oliverkraft93-ops/covasyn-mcp-examples",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.covasyn.com/mcp",
+      "headers": [
+        {
+          "name": "X-CovaSyn-Key",
+          "description": "CovaSyn API key (optional if your client uses OAuth). Get one at workspace.covasyn.com",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
