@@ -13,7 +13,7 @@ See [`claude_desktop_config.json`](./claude_desktop_config.json).
 
 ## Get an API key
 
-[covasyn.com/en/pricing →](https://www.covasyn.com/en/pricing) — Free tier with 100 credits/week works for evaluation.
+Get a key at [workspace.covasyn.com](https://workspace.covasyn.com/en/auth/signup).
 
 ## What you can do
 
