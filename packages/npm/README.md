@@ -1,6 +1,6 @@
 # covasyn-mcp
 
-Stdio bridge to the [CovaSyn](https://covasyn.com) chemistry MCP server: 200+ deterministic tools across 19 suites, covering ADMET, ICH M7 impurity assessment, ICH Q1 stability, docking, folding, DoE and spectral interpretation.
+Stdio bridge to the [CovaSyn](https://covasyn.com) chemistry MCP server, covering ICH M7 impurity assessment, ICH Q1 stability, spectra interpretation and more.
 
 Deterministic means the same input returns the same result, with the method and its limits stated. That is the property that makes an output usable in a regulated first pass.
 
@@ -19,7 +19,7 @@ npx covasyn-mcp --key <your-key>
 
 ## Getting a key
 
-1. Create a free account at [workspace.covasyn.com](https://workspace.covasyn.com/en/auth/signup). The free tier includes 100 analyses per week, no payment details required.
+1. Create a free account at [workspace.covasyn.com](https://workspace.covasyn.com/en/auth/signup). 
 2. Generate a key under [API keys](https://workspace.covasyn.com/en/dashboard/keys). It is shown once.
 
 Full documentation: [covasyn.com/en/docs/mcp](https://covasyn.com/en/docs/mcp)
@@ -48,4 +48,4 @@ A thin wrapper. It resolves your key, then delegates protocol bridging to `mcp-r
 
 ## Licence
 
-MIT. CovaSyn GmbH, Leipzig.
+MIT for this wrapper. The CovaSyn service itself is commercial software operated and maintained by CovaSyn GmbH, Leipzig.
